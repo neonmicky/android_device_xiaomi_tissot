@@ -22,11 +22,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/tissot/device.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/xtended/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := tissot
-PRODUCT_NAME := lineage_tissot
+PRODUCT_NAME := xtended_tissot
 BOARD_VENDOR := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi A1
@@ -37,6 +37,11 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 TARGET_GAPPS_ARCH := arm64
 TARGET_BOOT_ANIMATION_RES := 1080
 IS_PHONE := true
+
+#Xtended Stuffs
+XTENDED_BUILD_TYPE := OFFICIAL
+XTENDED_BUILD_MAINTAINER := Neonmicky
+XTENDED_BUILD_DONATE_URL := https://www.paypal.me/neonmicky
 
 # Build fingerprint
 BUILD_FINGERPRINT := xiaomi/tissot/tissot_sprout:8.0.0/OPR1.170623.026/8.1.10:user/release-keys
